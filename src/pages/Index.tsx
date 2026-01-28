@@ -6,6 +6,11 @@ import QuoteCarousel from '@/components/QuoteCarousel';
 import InfoTicker from '@/components/InfoTicker';
 import LatestNews from '@/components/LatestNews';
 import WeatherSection from '@/components/WeatherSection';
+import SeasonalHighlights from '@/components/SeasonalHighlights';
+import CommunityCalendar from '@/components/CommunityCalendar';
+import OutdoorRecreation from '@/components/OutdoorRecreation';
+import LocalSpotlight from '@/components/LocalSpotlight';
+import TideChart from '@/components/TideChart';
 import AlaskaListingsAd from '@/components/AlaskaListingsAd';
 import ConsultingGroupAd from '@/components/ads/ConsultingGroupAd';
 import MiningEquipmentAd from '@/components/ads/MiningEquipmentAd';
@@ -35,7 +40,10 @@ const Index = () => {
       {/* Quote Carousel */}
       <QuoteCarousel />
       
-      {/* Ad: Alaska Fires - Safety/Emergency theme fits after quotes */}
+      {/* Seasonal Highlights - Daylight & Aurora */}
+      <SeasonalHighlights />
+      
+      {/* Ad: Alaska Fires - Safety theme after seasonal info */}
       <AlaskaFiresAd />
       
       {/* Info Ticker */}
@@ -47,20 +55,32 @@ const Index = () => {
       {/* Ad: Alaska Consulting Group */}
       <ConsultingGroupAd />
       
+      {/* Outdoor Recreation - Trails & Conditions */}
+      <OutdoorRecreation />
+      
+      {/* Ad: Alaskan Boats - Outdoor/recreation theme */}
+      <AlaskanBoatsAd />
+      
+      {/* Community Calendar */}
+      <CommunityCalendar />
+      
+      {/* Ad: Anchorage Chronicle - Community connection */}
+      <AnchorageChronicleAd />
+      
       {/* Latest News Grid */}
       <LatestNews />
       
       {/* Ad: Alaska Gold News - Mining/industry after news */}
       <AlaskaGoldNewsAd />
       
-      {/* Ad: Mining Equipment */}
+      {/* Community Spotlight */}
+      <LocalSpotlight />
+      
+      {/* Tide Chart */}
+      <TideChart />
+      
+      {/* Ad: Mining Equipment - Industry theme */}
       <MiningEquipmentAd />
-      
-      {/* Ad: Anchorage Chronicle - Sister publication */}
-      <AnchorageChronicleAd />
-      
-      {/* Ad: Alaskan Boats */}
-      <AlaskanBoatsAd />
       
       {/* Ad: Alaska Listings - Featured before footer */}
       <AlaskaListingsAd />
