@@ -12,7 +12,8 @@ const Footer = () => {
               <img 
                 src={chugachLogo} 
                 alt="Chugach News" 
-                className="h-12 w-auto rounded"
+                className="h-18 w-auto rounded"
+                style={{ height: '4.5rem' }}
               />
             </div>
             <p className="text-muted-foreground text-xs mt-2 max-w-sm">

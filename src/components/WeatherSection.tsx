@@ -53,7 +53,7 @@ const WeatherSection = () => {
               title="Windy Weather Radar"
               width="100%"
               height="480"
-              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=7&overlay=radar&product=radar&level=surface&lat=60.7&lon=-147.0&detailLat=60.7&detailLon=-147.0&marker=true&message=true&calendar=now&pressure=true&type=map&menu=&forecast=12&detail=true&theme=dark"
+              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=4&overlay=radar&product=radar&level=surface&lat=63.5&lon=-152.0&detailLat=61.0&detailLon=-147.0&marker=true&message=true&calendar=now&pressure=true&type=map&menu=&forecast=12&detail=true&theme=dark"
               frameBorder="0"
               className="w-full"
               style={{ minHeight: '480px' }}
