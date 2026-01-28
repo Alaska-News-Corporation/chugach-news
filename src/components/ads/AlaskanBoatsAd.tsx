@@ -4,15 +4,13 @@ import boatsBg from '@/assets/ads/boats-background.jpg';
 
 const AlaskanBoatsAd = () => {
   return (
-    <section className="py-4">
+    <section className="py-2">
       <div className="container mx-auto px-3">
-        {/* Wide Rectangle Ad */}
         <a
           href="https://alaskanboats.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="block relative overflow-hidden rounded-lg group max-w-2xl mx-auto"
-          style={{ aspectRatio: '3/1' }}
+          className="block relative overflow-hidden rounded-lg group h-16"
         >
           {/* Background Image */}
           <div className="absolute inset-0">
@@ -21,25 +19,25 @@ const AlaskanBoatsAd = () => {
               alt="" 
               className="w-full h-full object-cover opacity-45 group-hover:opacity-55 transition-opacity"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0f1a24]/90 via-[#1a2a3a]/70 to-[#0f1a24]/90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0f1a24]/90 via-[#1a2a3a]/75 to-[#0f1a24]/90" />
           </div>
           
           {/* Nautical accent border */}
           <div className="absolute inset-0 rounded-lg border border-[#6ab8c7]/20 group-hover:border-[#6ab8c7]/40 transition-colors" />
           
-          <div className="relative flex items-center justify-between h-full px-6 py-4">
-            {/* Logo */}
-            <div className="w-16 h-12 flex-shrink-0 overflow-hidden rounded">
-              <img 
-                src={boatsLogo} 
-                alt="Alaskan Boats" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="flex-1 text-center px-4">
-              <p className="text-[#d0e0e8] font-semibold text-base mb-0.5">Alaskan Boats</p>
-              <p className="text-[#8aa0a8] text-xs">Your Vessel Awaits in Alaska's Waters</p>
+          <div className="relative flex items-center justify-between h-full px-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 flex-shrink-0 overflow-hidden rounded">
+                <img 
+                  src={boatsLogo} 
+                  alt="Alaskan Boats" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-[#d0e0e8] font-semibold text-sm">Alaskan Boats</p>
+                <p className="text-[#8aa0a8] text-xs">Your Vessel Awaits in Alaska's Waters</p>
+              </div>
             </div>
             
             <div className="flex items-center gap-1.5 px-4 py-2 bg-[#6ab8c7] hover:bg-[#7ac8d7] text-[#0f1a24] text-xs font-bold rounded transition-colors">

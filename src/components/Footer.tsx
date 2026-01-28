@@ -1,13 +1,20 @@
 import { Mail } from 'lucide-react';
+import chugachLogo from '@/assets/logos/chugach-news-logo.jpg';
 
 const Footer = () => {
   return (
     <footer className="bg-secondary/80 border-t border-border/50 py-6">
       <div className="container mx-auto px-3">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Brand */}
+          {/* Brand with Logo */}
           <div className="md:col-span-2">
-            <span className="font-serif text-lg font-bold text-foreground">Chugach News</span>
+            <div className="flex items-center gap-3 mb-2">
+              <img 
+                src={chugachLogo} 
+                alt="Chugach News" 
+                className="h-12 w-auto rounded"
+              />
+            </div>
             <p className="text-muted-foreground text-xs mt-2 max-w-sm">
               Your trusted source for news, weather, and community updates from the heart of the Chugach Region. Serving Valdez, Cordova, Whittier, and surrounding communities.
             </p>
