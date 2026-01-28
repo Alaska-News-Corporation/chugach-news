@@ -6,49 +6,47 @@ const MiningEquipmentAd = () => {
   return (
     <section className="py-3">
       <div className="container mx-auto px-3">
-        <a
-          href="https://alaskaminingequipment.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block relative overflow-hidden rounded-lg group"
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src={miningBg} 
-              alt="" 
-              className="w-full h-full object-cover opacity-35 group-hover:opacity-45 transition-opacity"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#2d2d2d]/95 via-[#3d3d3d]/90 to-[#2d2d2d]/95" />
-          </div>
-          
-          {/* Rugged accent - matches logo's mountain/pickaxe aesthetic */}
-          <div className="absolute inset-0 opacity-15">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c9a962] to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c9a962] to-transparent" />
-          </div>
-          
-          <div className="relative flex items-center gap-3 p-3">
-            {/* Logo */}
-            <div className="w-16 h-12 flex-shrink-0 overflow-hidden rounded">
+        {/* Compact Square Ad */}
+        <div className="flex justify-center">
+          <a
+            href="https://alaskaminingequipment.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative overflow-hidden rounded-lg group w-full max-w-xs aspect-square"
+          >
+            {/* Background Image */}
+            <div className="absolute inset-0">
               <img 
-                src={miningLogo} 
-                alt="Alaska Mining Equipment" 
-                className="w-full h-full object-cover"
+                src={miningBg} 
+                alt="" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-55 transition-opacity"
               />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#2d2d2d]/80 via-[#3d3d3d]/60 to-[#2d2d2d]/90" />
             </div>
             
-            <div className="flex-1 min-w-0">
-              <p className="text-[#e0e0e0] font-semibold text-xs truncate">Alaska Mining Equipment</p>
-              <p className="text-[#a0a0a0] text-[10px] truncate">Heavy Equipment for Alaska's Rugged Frontier</p>
-            </div>
+            {/* Gold accent border */}
+            <div className="absolute inset-0 rounded-lg border border-[#c9a962]/20 group-hover:border-[#c9a962]/40 transition-colors" />
             
-            <div className="flex items-center gap-1 px-2.5 py-1.5 bg-[#c9a962] hover:bg-[#d9b972] text-[#2d2d2d] text-[10px] font-bold rounded transition-colors">
-              Visit
-              <ExternalLink className="w-2.5 h-2.5" />
+            <div className="relative flex flex-col items-center justify-center h-full p-4 text-center">
+              {/* Logo */}
+              <div className="w-20 h-16 flex-shrink-0 overflow-hidden rounded mb-3">
+                <img 
+                  src={miningLogo} 
+                  alt="Alaska Mining Equipment" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              <p className="text-[#e0e0e0] font-semibold text-sm mb-1">Alaska Mining Equipment</p>
+              <p className="text-[#a0a0a0] text-xs mb-4">Heavy Equipment for Alaska's Rugged Frontier</p>
+              
+              <div className="flex items-center gap-1.5 px-4 py-2 bg-[#c9a962] hover:bg-[#d9b972] text-[#2d2d2d] text-xs font-bold rounded transition-colors">
+                Visit Site
+                <ExternalLink className="w-3 h-3" />
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </section>
   );

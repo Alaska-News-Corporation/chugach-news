@@ -28,25 +28,25 @@ const Index = () => {
       {/* Hero Section with Snow Animation */}
       <HeroSection heroImage={heroImage} />
       
-      {/* Alaska Consulting Group Ad */}
-      <ConsultingGroupAd />
-      
       {/* Quote Carousel */}
       <QuoteCarousel />
       
       {/* Info Ticker */}
       <InfoTicker />
       
-      {/* Mining Equipment Ad */}
-      <MiningEquipmentAd />
-      
       {/* Latest News Grid */}
       <LatestNews />
       
-      {/* Alaskan Boats Ad */}
+      {/* Mining Equipment Ad - Compact Square */}
+      <MiningEquipmentAd />
+      
+      {/* Alaska Consulting Group Ad - Compact Square */}
+      <ConsultingGroupAd />
+      
+      {/* Alaskan Boats Ad - Wide Rectangle */}
       <AlaskanBoatsAd />
       
-      {/* Alaska Listings Ad */}
+      {/* Alaska Listings Ad - Featured Banner */}
       <AlaskaListingsAd />
       
       {/* Footer */}
