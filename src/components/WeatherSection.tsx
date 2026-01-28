@@ -52,11 +52,11 @@ const WeatherSection = () => {
             <iframe
               title="Windy Weather Radar"
               width="100%"
-              height="350"
-              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=7&overlay=radar&product=radar&level=surface&lat=61.13&lon=-146.35&detailLat=61.13&detailLon=-146.35&marker=true&message=true&calendar=now&pressure=true&type=map&menu=&forecast=12&detail=true&theme=dark"
+              height="480"
+              src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=in&metricTemp=°F&metricWind=mph&zoom=7&overlay=radar&product=radar&level=surface&lat=60.7&lon=-147.0&detailLat=60.7&detailLon=-147.0&marker=true&message=true&calendar=now&pressure=true&type=map&menu=&forecast=12&detail=true&theme=dark"
               frameBorder="0"
               className="w-full"
-              style={{ minHeight: '350px' }}
+              style={{ minHeight: '480px' }}
             />
           </div>
 

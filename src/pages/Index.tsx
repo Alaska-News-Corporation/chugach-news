@@ -32,14 +32,14 @@ const Index = () => {
       {/* Quote Carousel */}
       <QuoteCarousel />
       
-      {/* Ad: Alaska Consulting Group */}
-      <ConsultingGroupAd />
-      
       {/* Info Ticker */}
       <InfoTicker />
       
       {/* Advanced Weather Section with Radar */}
       <WeatherSection />
+      
+      {/* Ad: Alaska Consulting Group */}
+      <ConsultingGroupAd />
       
       {/* Ad: Mining Equipment */}
       <MiningEquipmentAd />
