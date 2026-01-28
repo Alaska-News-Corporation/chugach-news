@@ -39,7 +39,7 @@ const Footer = () => {
 
         <div className="border-t border-border/50 mt-4 pt-4 flex flex-col md:flex-row justify-between items-center text-[10px] text-muted-foreground">
           <p>© 2026 Chugach News. All rights reserved.</p>
-          <p className="mt-1 md:mt-0">A property of Alaska Listings LLC</p>
+          <p className="mt-1 md:mt-0">A property of Alaska News Corporation</p>
         </div>
       </div>
     </footer>

@@ -6,6 +6,7 @@ import QuoteCarousel from '@/components/QuoteCarousel';
 import InfoTicker from '@/components/InfoTicker';
 import LatestNews from '@/components/LatestNews';
 import AlaskaListingsAd from '@/components/AlaskaListingsAd';
+import SponsorAds from '@/components/SponsorAds';
 import Footer from '@/components/Footer';
 import ThemeToggle from '@/components/ThemeToggle';
 import heroImage from '@/assets/hero-chugach-winter.jpg';
@@ -36,6 +37,9 @@ const Index = () => {
       
       {/* Alaska Listings Ad */}
       <AlaskaListingsAd />
+      
+      {/* Sponsor Ads */}
+      <SponsorAds />
       
       {/* Footer */}
       <Footer />
