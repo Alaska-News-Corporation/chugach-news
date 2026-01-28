@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Brand */}
           <div className="md:col-span-2">
-            <span className="font-serif text-lg font-bold text-foreground">Alaska News Corporation</span>
+            <span className="font-serif text-lg font-bold text-foreground">Chugach News</span>
             <p className="text-muted-foreground text-xs mt-2 max-w-sm">
               Your trusted source for news, weather, and community updates from the heart of the Chugach Region. Serving Valdez, Cordova, Whittier, and surrounding communities.
             </p>
