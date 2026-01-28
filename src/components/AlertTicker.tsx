@@ -1,5 +1,3 @@
-import { AlertTriangle } from 'lucide-react';
-
 const alerts = [
   "AVALANCHE WARNING: Chugach backcountry above 3,000ft. Avoid steep slopes.",
   "WHITEOUT CONDITIONS: Thompson Pass closed. Check conditions before travel.",
@@ -11,18 +9,17 @@ const alerts = [
 
 const AlertTicker = () => {
   return (
-    <div className="bg-destructive/10 border-y border-destructive/30 py-2 overflow-hidden">
+    <div className="bg-coral/10 border-y border-coral/30 py-1.5 overflow-hidden">
       <div className="flex items-center">
-        <div className="flex items-center gap-2 px-4 bg-destructive text-destructive-foreground py-1 rounded-r-full shrink-0 z-10">
-          <AlertTriangle className="w-4 h-4" />
-          <span className="font-semibold text-sm">LIVE UPDATES</span>
+        <div className="flex items-center gap-1.5 px-3 bg-coral text-foreground py-0.5 text-xs font-semibold shrink-0 z-10">
+          LIVE UPDATES
         </div>
         <div className="overflow-hidden flex-1">
           <div className="ticker-scroll flex whitespace-nowrap">
             {[...alerts, ...alerts].map((alert, index) => (
-              <span key={index} className="mx-8 text-sm">
-                <span className="text-destructive">●</span>
-                <span className="ml-2 text-foreground">{alert}</span>
+              <span key={index} className="mx-6 text-xs">
+                <span className="text-coral">●</span>
+                <span className="ml-1.5 text-foreground">{alert}</span>
               </span>
             ))}
           </div>

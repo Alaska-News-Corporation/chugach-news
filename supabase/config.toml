@@ -1,0 +1,4 @@
+project_id = "ugpjoodiangmvpeysaoo"
+
+[functions.generate-news]
+verify_jwt = false

@@ -7,58 +7,65 @@
 @layer base {
   :root {
     /* Chugach News Design System - Dark Alaska Theme */
-    --background: 215 28% 8%;
+    --background: 220 15% 8%;
     --foreground: 210 20% 95%;
 
-    --card: 215 25% 11%;
+    --card: 220 15% 11%;
     --card-foreground: 210 20% 95%;
 
-    --popover: 215 25% 11%;
+    --popover: 220 15% 11%;
     --popover-foreground: 210 20% 95%;
 
-    --primary: 187 70% 45%;
-    --primary-foreground: 215 28% 8%;
+    --primary: 195 70% 45%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 215 20% 18%;
+    --secondary: 220 12% 16%;
     --secondary-foreground: 210 20% 90%;
 
-    --muted: 215 20% 15%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 220 12% 14%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 38 90% 55%;
-    --accent-foreground: 215 28% 8%;
+    --accent: 38 85% 50%;
+    --accent-foreground: 220 15% 8%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 187 70% 45%;
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 195 70% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    /* Custom Chugach colors */
-    --glacier: 187 70% 45%;
-    --glacier-glow: 187 80% 55%;
-    --aurora-green: 160 70% 45%;
-    --aurora-purple: 280 60% 50%;
-    --alert-red: 0 85% 55%;
-    --alert-amber: 38 90% 55%;
+    /* Chugach Custom Colors */
+    --glacier: 195 70% 45%;
+    --glacier-glow: 195 80% 55%;
+    --steel: 220 12% 25%;
+    --steel-light: 220 10% 40%;
+    --coral: 0 75% 55%;
+    --gold: 38 85% 50%;
+    --crimson: 0 65% 45%;
     --snow: 210 30% 95%;
     --ice: 200 40% 80%;
-    --mountain: 215 25% 25%;
-    --forest: 150 30% 20%;
+    --mountain: 220 15% 20%;
+    --forest: 150 25% 18%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(180deg, transparent 0%, hsl(215 28% 8% / 0.3) 50%, hsl(215 28% 8% / 0.95) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(215 25% 13%) 0%, hsl(215 25% 9%) 100%);
-    --gradient-glacier: linear-gradient(135deg, hsl(187 70% 45%) 0%, hsl(200 70% 35%) 100%);
-    --gradient-aurora: linear-gradient(90deg, hsl(160 70% 45%) 0%, hsl(187 70% 45%) 50%, hsl(280 60% 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, transparent 0%, hsl(220 15% 8% / 0.4) 50%, hsl(220 15% 8% / 0.98) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 15% 13%) 0%, hsl(220 15% 9%) 100%);
+    --gradient-glacier: linear-gradient(135deg, hsl(195 70% 45%) 0%, hsl(200 70% 35%) 100%);
   }
 
   .dark {
-    --background: 215 28% 8%;
+    --background: 220 15% 6%;
     --foreground: 210 20% 95%;
+    --card: 220 15% 9%;
+    --muted: 220 12% 12%;
+    --muted-foreground: 220 10% 70%;
+    --secondary: 220 12% 14%;
+    --accent: 220 12% 20%;
+    --accent-foreground: 210 20% 95%;
+    --border: 220 12% 15%;
   }
 }
 
@@ -79,7 +86,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-card/80 backdrop-blur-md border border-border/50 rounded-lg;
+    @apply bg-card/90 backdrop-blur-sm border border-border/50 rounded;
   }
 
   .glacier-text {
@@ -87,36 +94,19 @@
   }
 
   .glacier-glow {
-    text-shadow: 0 0 20px hsl(var(--glacier) / 0.5);
-  }
-
-  .aurora-text {
-    background: linear-gradient(90deg, hsl(var(--aurora-green)), hsl(var(--glacier)), hsl(var(--aurora-purple)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .live-pulse {
-    @apply relative;
-  }
-
-  .live-pulse::before {
-    content: '';
-    @apply absolute w-2 h-2 rounded-full bg-destructive;
-    animation: pulse-ring 1.5s ease-out infinite;
+    text-shadow: 0 0 20px hsl(var(--glacier) / 0.4);
   }
 
   .ticker-scroll {
-    animation: ticker 30s linear infinite;
+    animation: ticker 35s linear infinite;
   }
 
   .weather-scroll {
-    animation: weather-ticker 25s linear infinite;
+    animation: weather-ticker 28s linear infinite;
   }
 
   .info-scroll {
-    animation: ticker 40s linear infinite;
+    animation: ticker 45s linear infinite;
   }
 }
 
@@ -143,73 +133,48 @@
 
 /* Ticker Animations */
 @keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes weather-ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes pulse-ring {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
 }
 
 @keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+  animation: fade-in-up 0.5s ease-out forwards;
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Stagger animations */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
 
-/* Custom scrollbar */
+/* Condensed scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -218,7 +183,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--border));
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

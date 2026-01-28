@@ -5,7 +5,9 @@ import HeroSection from '@/components/HeroSection';
 import QuoteCarousel from '@/components/QuoteCarousel';
 import InfoTicker from '@/components/InfoTicker';
 import LatestNews from '@/components/LatestNews';
+import AlaskaListingsAd from '@/components/AlaskaListingsAd';
 import Footer from '@/components/Footer';
+import ThemeToggle from '@/components/ThemeToggle';
 import heroImage from '@/assets/hero-chugach-winter.jpg';
 
 const Index = () => {
@@ -32,8 +34,14 @@ const Index = () => {
       {/* Latest News Grid */}
       <LatestNews />
       
+      {/* Alaska Listings Ad */}
+      <AlaskaListingsAd />
+      
       {/* Footer */}
       <Footer />
+      
+      {/* Theme Toggle */}
+      <ThemeToggle />
     </div>
   );
 };

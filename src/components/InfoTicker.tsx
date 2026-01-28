@@ -13,13 +13,13 @@ const infoItems = [
 
 const InfoTicker = () => {
   return (
-    <div className="bg-mountain/30 border-y border-border/20 py-3 overflow-hidden">
+    <div className="bg-mountain/30 border-y border-border/20 py-1.5 overflow-hidden">
       <div className="info-scroll flex whitespace-nowrap">
         {[...infoItems, ...infoItems].map((item, index) => (
-          <div key={index} className="flex items-center gap-2 mx-8">
-            <item.icon className="w-4 h-4 text-primary shrink-0" />
-            <span className="text-primary font-medium text-sm">{item.label}:</span>
-            <span className="text-foreground text-sm">{item.text}</span>
+          <div key={index} className="flex items-center gap-1.5 mx-6 text-xs">
+            <item.icon className="w-3 h-3 text-primary shrink-0" />
+            <span className="text-primary font-medium">{item.label}:</span>
+            <span className="text-foreground">{item.text}</span>
           </div>
         ))}
       </div>

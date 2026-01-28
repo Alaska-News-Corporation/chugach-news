@@ -7,7 +7,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
@@ -53,14 +53,13 @@ export default {
         },
         glacier: "hsl(var(--glacier))",
         "glacier-glow": "hsl(var(--glacier-glow))",
-        aurora: {
-          green: "hsl(var(--aurora-green))",
-          purple: "hsl(var(--aurora-purple))",
+        steel: {
+          DEFAULT: "hsl(var(--steel))",
+          light: "hsl(var(--steel-light))",
         },
-        alert: {
-          red: "hsl(var(--alert-red))",
-          amber: "hsl(var(--alert-amber))",
-        },
+        coral: "hsl(var(--coral))",
+        gold: "hsl(var(--gold))",
+        crimson: "hsl(var(--crimson))",
         snow: "hsl(var(--snow))",
         ice: "hsl(var(--ice))",
         mountain: "hsl(var(--mountain))",
