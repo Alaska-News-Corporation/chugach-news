@@ -1,13 +1,37 @@
-const alerts = [
+import { useQuery } from '@tanstack/react-query';
+import { supabase } from '@/integrations/supabase/client';
+
+const fallbackAlerts = [
   "AVALANCHE WARNING: Chugach backcountry above 3,000ft. Avoid steep slopes.",
-  "WHITEOUT CONDITIONS: Thompson Pass closed. Check conditions before travel.",
-  "POWER OUTAGE: Crews responding to Valdez downtown. Restoration by 4PM.",
-  "MOOSE ALERT: High activity on Richardson Hwy near Mile 25. Drive slow.",
-  "COLD SNAP: Temps dropping to -25F tonight in Cordova. Protect your pipes.",
-  "REMINDER: Chugach School District weather delays announced by 6AM Thursday.",
+  "REMINDER: Check conditions before travel on Thompson Pass.",
 ];
 
 const AlertTicker = () => {
+  const { data: alerts } = useQuery({
+    queryKey: ['alerts'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('alerts')
+        .select('*')
+        .eq('active', true)
+        .order('created_at', { ascending: false })
+        .limit(10);
+      
+      if (error) {
+        console.error('Error fetching alerts:', error);
+        return fallbackAlerts;
+      }
+      
+      return data?.length > 0 
+        ? data.map(a => a.message) 
+        : fallbackAlerts;
+    },
+    refetchInterval: 5 * 60 * 1000, // Refetch every 5 minutes
+    staleTime: 2 * 60 * 1000,
+  });
+
+  const displayAlerts = alerts || fallbackAlerts;
+
   return (
     <div className="bg-coral/10 border-y border-coral/30 py-1.5 overflow-hidden">
       <div className="flex items-center">
@@ -16,7 +40,7 @@ const AlertTicker = () => {
         </div>
         <div className="overflow-hidden flex-1">
           <div className="ticker-scroll flex whitespace-nowrap">
-            {[...alerts, ...alerts].map((alert, index) => (
+            {[...displayAlerts, ...displayAlerts].map((alert, index) => (
               <span key={index} className="mx-6 text-xs">
                 <span className="text-coral">●</span>
                 <span className="ml-1.5 text-foreground">{alert}</span>
